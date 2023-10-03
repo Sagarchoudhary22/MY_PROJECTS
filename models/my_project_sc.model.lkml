@@ -1,8 +1,9 @@
 # Define the database connection to be used for this model.
-connection: "sagar_2000"
+connection: "sagar2000"
 
 # include all the views
 include: "/views/**/*.view.lkml"
+
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
@@ -25,7 +26,32 @@ persist_with: my_project_sc_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: car_data {}
+explore: car_data {
+  # join: country_data {
+  #   view_label: "SAGAR"
+  #   type: left_outer
+  #   relationship: many_to_many
+  #   sql_on: ${car_data.city}=${country_data.count} ;;
+
+ # }
+
+  # view_name: car_data {
+  #   derived_table: {
+  #     materialized_view: yes
+  #     explore_source: car_data {
+  #       column: source {}
+  #       column: make {}
+  #       column: kms_run {}
+  #     }
+  #   }
+  #   dimension: source {}
+  #   dimension: make {}
+  #   dimension: kms_run {
+  #     type: string
+  #   }
+  # }
+
+}
 
 explore: employee {}
 
@@ -44,4 +70,3 @@ explore: country_data {}
 explore: students {}
 
 explore: proptech_ {}
-
