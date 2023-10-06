@@ -129,6 +129,12 @@ view: car_data {
     sql: ${TABLE}.kms_run ;;
   }
 
+  measure: kms_run1 {
+    type: sum
+    sql: ${TABLE}.kms_run1 ;;
+    drill_fields: [kms_run]
+  }
+
   dimension: make {
     type: string
     sql: ${TABLE}.make ;;

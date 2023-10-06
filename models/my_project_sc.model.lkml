@@ -3,6 +3,7 @@ connection: "sagar2000"
 
 # include all the views
 include: "/views/**/*.view.lkml"
+include: "/views/add_a_unique_name_1696499666.view.lkml"
 
 
 # Datagroups define a caching policy for an Explore. To learn more,
@@ -68,5 +69,6 @@ explore: old_car_data {}
 explore: country_data {}
 
 explore: students {}
+explore: add_a_unique_name_1696499666 {}
 
 explore: proptech_ {}
