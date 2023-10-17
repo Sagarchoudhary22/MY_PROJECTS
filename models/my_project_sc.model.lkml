@@ -3,7 +3,7 @@ connection: "sagar_2000"
 
 # include all the views
 include: "/views/**/*.view.lkml"
-
+include: "/dash.dashboard.lookml"
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
 
@@ -44,4 +44,3 @@ explore: country_data {}
 explore: students {}
 
 explore: proptech_ {}
-
