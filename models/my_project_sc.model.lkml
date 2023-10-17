@@ -3,7 +3,7 @@ connection: "sagar2000"
 
 # include all the views
 include: "/views/**/*.view.lkml"
-include: "/views/add_a_unique_name_1696499666.view.lkml"
+include: "/views/drived_table.view.lkml"
 
 
 # Datagroups define a caching policy for an Explore. To learn more,
@@ -15,6 +15,13 @@ datagroup: my_project_sc_default_datagroup {
 }
 
 persist_with: my_project_sc_default_datagroup
+
+datagroup: drived_table {
+  sql_trigger: select max(id) from drived_table  ;;
+  max_cache_age: "1 hour"
+}
+
+persist_with: drived_table
 
 # Explores allow you to join together different views (database tables) based on the
 # relationships between fields. By joining a view into an Explore, you make those
@@ -69,6 +76,6 @@ explore: old_car_data {}
 explore: country_data {}
 
 explore: students {}
-explore: add_a_unique_name_1696499666 {}
+explore: drived_table {}
 
 explore: proptech_ {}

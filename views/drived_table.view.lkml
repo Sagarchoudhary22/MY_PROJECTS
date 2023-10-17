@@ -1,8 +1,9 @@
 # If necessary, uncomment the line below to include explore_source.
 # include: "my_project_sc.model.lkml"
 
-view: add_a_unique_name_1696499666 {
+view: drived_table {
   derived_table: {
+    datagroup_trigger: drived_table
     explore_source: car_data {
       column: car_name {}
       column: model {}
