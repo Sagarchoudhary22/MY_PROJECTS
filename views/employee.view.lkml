@@ -47,6 +47,7 @@ view: employee {
   dimension: first_name_last_name {
     type: string
     sql: ${TABLE}.FirstName_LastName ;;
+    html:<img src="https://img.freepik.com/free-psd/google-icon-isolated-3d-render-illustration_47987-9777.jpg" /> ;;
   }
 
   dimension: job_title {
