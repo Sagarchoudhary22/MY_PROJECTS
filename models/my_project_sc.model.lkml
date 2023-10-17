@@ -4,9 +4,15 @@ connection: "sagar2000"
 # include all the views
 include: "/views/**/*.view.lkml"
 
+
 include: "/views/drived_table.view.lkml"
 include: "/dash.dashboard.lookml"
-include: "/views/add_a_unique_name_1696499666.view.lkml"
+
+
+include: "/dash.dashboard.lookml"
+
+
+
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
