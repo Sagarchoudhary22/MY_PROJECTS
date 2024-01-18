@@ -68,22 +68,15 @@ explore: car_data {
   # }
 
 }
-
+explore: native_drived_table {}
+explore: sql_drived{}
 explore: employee {}
-
 explore: train_data {}
-
 explore: house_rent_data {}
-
 explore: indian_vehicle_details {}
-
 explore: employee2 {}
-
 explore: old_car_data {}
-
 explore: country_data {}
-
 explore: students {}
 explore: drived_table {}
-
 explore: proptech_ {}
