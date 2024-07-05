@@ -90,6 +90,13 @@ view: indian_vehicle_details {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
+
+  measure: date_diff_example {
+    type: number
+    sql: datediff(${year}, ${year}) ;;
+    description: "Calculates the difference in days between two dates."
+  }
+
   measure: total_price {
     type: sum
     sql: ${price} ;;  }

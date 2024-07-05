@@ -31,6 +31,13 @@ datagroup: drived_table {
 
 persist_with: drived_table
 
+datagroup: SQl_drived {
+  sql_trigger: select max(id) from drived_table  ;;
+  max_cache_age: "1 hour"
+}
+
+persist_with: SQl_drived
+
 # Explores allow you to join together different views (database tables) based on the
 # relationships between fields. By joining a view into an Explore, you make those
 # fields available to users for data analysis.
@@ -80,3 +87,4 @@ explore: country_data {}
 explore: students {}
 explore: drived_table {}
 explore: proptech_ {}
+explore: newmv {}

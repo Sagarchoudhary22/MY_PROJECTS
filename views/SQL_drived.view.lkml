@@ -1,15 +1,30 @@
 view: sql_drived {
 derived_table: {
-  sql: SELECT id,fuel_type, kms_run, sale_price, city from sagar_choudhary.CAR DATA;;
+  sql: SELECT id,fuel_type,kms_run, sale_price, city from `searce-practice-data-analytics.sagar_choudhary.CAR DATA`;;
 }
 dimension: id {
   type: number
   sql: ${TABLE}.id ;;
 }
+
 dimension: fuel_type {
   type: string
   sql:${TABLE}.fuel_type ;;
   }
+  dimension: kms_run {
+    type: number
+    sql:${TABLE}.kms_run ;;
+  }
+
+  measure: kms_run1 {
+    type: sum
+    sql:${TABLE}.kms_run ;;
+  }
+
+  dimension: sale_price {
+    type:number
+    sql:${TABLE}.sale_price ;;
+    }
 }
 
 # view: customer_order_summary {

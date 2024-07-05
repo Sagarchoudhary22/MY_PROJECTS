@@ -73,3 +73,19 @@ view: native_drived_table {
       type: number
     }
   }
+
+
+# derived_table: {
+#   explore_source: original_price {
+#     column: original_price { field: car_data.original_price }
+#     column: sale_price { field: car_data.sale_price }
+#     }
+#     dimension: original_price {
+#       description: ""
+#       type: number
+#     }
+#     dimension: sale_price {
+#       description: ""
+#       type: number
+#   }
+# }}
