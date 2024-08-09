@@ -11,6 +11,7 @@ include: "/dash.dashboard.lookml"
 
 include: "/dash.dashboard.lookml"
 
+include: "/views/native.view.lkml"
 
 
 
@@ -37,6 +38,14 @@ datagroup: SQl_drived {
 }
 
 persist_with: SQl_drived
+
+
+datagroup: native {
+  sql_trigger: select max(id) from drived_table  ;;
+  max_cache_age: "1 hour"
+}
+
+persist_with: native
 
 # Explores allow you to join together different views (database tables) based on the
 # relationships between fields. By joining a view into an Explore, you make those
@@ -88,3 +97,4 @@ explore: students {}
 explore: drived_table {}
 explore: proptech_ {}
 explore: newmv {}
+explore: native {}

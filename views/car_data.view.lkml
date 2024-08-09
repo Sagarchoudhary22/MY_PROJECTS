@@ -89,6 +89,23 @@ view: car_data {
   #   sql: ${TABLE}.car_availability ;;
   # }
 
+  dimension: city_image {
+    type: string
+    sql: ${registered_city} ;;
+    html:
+              {% if registered_city._value == "pune" %}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" height="170" width="255">
+              {% elsif registered_city._value == "bengaluru" %}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_New_York.svg/1200px-Flag_of_New_York.svg.png" height="170" width="255">
+              {% elsif registered_city._value == "thane" %}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Flag_of_Colorado.svg/255px-Flag_of_Colorado.svg.png" height="170" width="255">
+              {% elsif registered_city._value == "panvel"%}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Illinois.svg/1200px-Flag_of_Illinois.svg.png" height="170" width="255">
+              {% else %}
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png" height="170" width="170">
+              {% endif %} ;;
+  }
+
   dimension: car_name {
     type: string
     sql: ${TABLE}.car_name ;;
