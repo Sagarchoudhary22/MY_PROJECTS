@@ -64,7 +64,10 @@ explore: car_data {
   #   type: left_outer
   #   relationship: many_to_many
   #   sql_on: ${car_data.city}=${country_data.count} ;;
-
+access_filter: {
+  field: registered_city
+  user_attribute: car_city
+}
  # }
 
   # view_name: car_data {
