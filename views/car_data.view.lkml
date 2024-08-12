@@ -196,9 +196,16 @@ view: car_data {
   }
 
   dimension: rto {
+    label:  "RTO Passing of {{_filters['registered_city']}}"
     type: string
     sql: ${TABLE}.rto ;;
-  }
+   }
+
+  # measure: rto {
+  #   label:  "Sales of {{_filters['order_date']}}"
+  #   type: sum
+  #   sql:  ${TABLE}.Sales ;;
+  # }
 
   dimension: sale_price {
     type: number
